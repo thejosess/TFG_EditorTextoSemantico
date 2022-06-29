@@ -1,0 +1,259 @@
+/* You can add global styles to this file, and also import other style files */
+// // crear clases del css dinámicamente por cada tipo que se consulta en la BD
+// span.tag-OPE::after {
+//     content: "OPE";
+//     margin: 8px;
+//     background-color: #dee;
+//     padding: 6px;
+//     border: 1px solid #AAA;
+//     border-radius: 5px;
+// }
+
+.ProseMirror .tableWrapper {
+    overflow-x: auto;
+}
+
+.ProseMirror table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    overflow: hidden;
+    background-color: #f4f4f4;
+}
+
+.ProseMirror table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    overflow: hidden;
+    background-color: #f4f4f4;
+}
+
+.ProseMirror td,
+.ProseMirror th {
+    vertical-align: top;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.ProseMirror .column-resize-handle {
+    position: absolute;
+    right: -2px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    z-index: 20;
+    background-color: #adf;
+    pointer-events: none;
+}
+
+.ProseMirror.resize-cursor {
+    cursor: ew-resize;
+    cursor: col-resize;
+}
+
+/* Give selected cells a blue overlay */
+.ProseMirror .selectedCell:after {
+    z-index: 2;
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(200, 200, 255, 0.4);
+    pointer-events: none;
+}
+
+.tag-OPE::after {
+    content: "OPE";
+    margin: 8px;
+    background-color: #dee;
+    padding: 6px;
+    border: 1px solid #AAA;
+    border-radius: 5px;
+}
+
+span.tag:hover {
+    background-color: #dee;
+}
+
+div.box {
+    background-color: #c2e5d3;
+}
+
+.tag-DUE::after {
+    content: "DUE";
+    margin: 8px;
+    background-color: #dee;
+    padding: 6px;
+    border: 1px solid #AAA;
+    border-radius: 5px;
+}
+
+.palette {
+    color: #5729e9;
+}
+
+.tag-TCAE::after {
+    content: "TCAE";
+    margin: 8px;
+    background-color: #dee;
+    padding: 6px;
+    border: 1px solid #AAA;
+    border-radius: 5px;
+}
+
+
+.content::after {
+    content: "Enfermeria";
+    margin: 8px;
+    background-color: rgb(166, 240, 156);
+    padding: 6px;
+    border: 1px solid #AAA;
+    border-radius: 5px;
+}
+
+.content:hover {
+    background-color: rgb(166, 240, 156);
+}
+
+
+// .subbox {
+//     background: linear-gradient(to right, #efc169 50%, transparent 50%);
+//     line-height: 0;
+// }
+
+// .subbox:hover {
+//     background-position: left bottom;
+// }
+
+// .subbox {
+//     background: rgba(255, 0, 0, 0.3);
+//     border-radius: 20% 25% 20% 24%;
+//     padding: 10px 3px 3px 10px;
+// }
+
+
+
+.icon-bg {
+    display: inline-block;
+    vertical-align: bottom; // This is the same alignment as .svg-icon
+    pointer-events: none; // SVGs can troll the parent's events. Disabling this ensures we aren't showing tooltips more than once.
+    border: none;
+    height: 18px;
+    width: 18px;
+    padding: 0;
+
+    /*     // use ::after so we can theme our icons without affecting the mask
+    // useful for e.g. setting the background-color for buttons, etc
+    &::after {
+        content: "";
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+        background-color: currentColor;
+        -webkit-mask: var(--bg-icon) no-repeat center;
+        mask: var(--bg-icon) no-repeat center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+    } */
+
+    &.iconBold {
+        display: inline-block;
+        background-image: url("./icons/Bold.svg");
+
+    }
+
+    &.iconItalic {
+        display: inline-block;
+        background-image: url("./icons/Italic.svg");
+
+    }
+
+    &.iconCode {
+        display: inline-block;
+        background-image: url("./icons/Codeblock.svg");
+
+    }
+
+    &.iconinsertTable {
+        display: inline-block;
+        background-image: url("./icons/Table.svg");
+
+    }
+
+    &.iconinsertBox {
+        display: inline-block;
+        background-image: url("./icons/Box.svg");
+        background-size: contain;
+    }
+
+    &.iconinsertSubBox {
+        display: inline-block;
+        background-image: url("./icons/Subbox.svg");
+        background-size: contain;
+    }
+
+    &.iconOrderedList {
+        display: inline-block;
+        background-image: url("./icons/Ordered.svg");
+        background-size: contain;
+    }
+
+
+    &.iconBulletList {
+        display: inline-block;
+        background-image: url("./icons/Unordered.svg");
+        background-size: contain;
+    }
+
+    &.iconinsertNodeMultiCols {
+        display: inline-block;
+        background-image: url("./icons/NodeMultiCols.svg");
+    }
+
+    &.iconheading1 {
+        display: inline-block;
+        background-image: url("./icons/Heading1.svg");
+        background-size: contain;
+    }
+
+    &.iconheading2 {
+        display: inline-block;
+        background-image: url("./icons/Heading2.svg");
+        background-size: contain;
+    }
+
+    &.iconheading3 {
+        display: inline-block;
+        background-image: url("./icons/Heading3.svg");
+        background-size: contain;
+    }
+
+    &.iconWrapin {
+        display: inline-block;
+        background-image: url("./icons/arrow.svg");
+        background-size: contain;
+    }
+
+    &.iconTag {
+        display: inline-block;
+        background-image: url("./icons/tag.svg");
+        background-size: contain;
+    }
+
+    &.iconPalette {
+        display: inline-block;
+        background-image: url("./icons/palette.svg");
+        background-size: contain;
+    }
+
+    &.iconContent {
+        display: inline-block;
+        background-image: url("./icons/content.svg");
+        background-size: contain;
+    }
+
+
+}

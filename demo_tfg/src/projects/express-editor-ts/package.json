@@ -1,0 +1,31 @@
+{
+  "name": "express-editor-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/express-editor-ts/index.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/express-editor-ts/index.js\""
+  },
+  "keyword,s": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "http": "^0.0.1-security",
+    "prosemirror-schema-basic": "^1.2.0",
+    "prosemirror-state": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.42",
+    "concurrently": "^7.2.1",
+    "nodemon": "^2.0.16",
+    "typescript": "^4.7.3"
+  }
+}

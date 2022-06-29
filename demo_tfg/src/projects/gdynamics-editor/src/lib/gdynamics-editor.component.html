@@ -1,0 +1,154 @@
+<meta charset=utf8>
+
+<script src="https://prosemirror.net/examples/prosemirror.js"></script>
+<script src="require-pm.js"></script>
+<link rel=stylesheet href="https://prosemirror.net/css/editor.css">
+<style>
+  div {
+    background-color: blue;
+}
+</style>
+<div
+  id="editor"
+  style="margin-bottom: 23px">
+</div>
+
+<div style="display: none" id="content">
+  <span
+    class="tag"
+    type="OPE"
+    color="#FF0000">
+    nuevo mark de exam_tag
+  </span>
+  <p>parrafo vacio</p>
+  <div
+    class="box"
+    box-type="green"
+    color="primary"
+    title="titulo del recuadro">
+    probando cuadro de color
+  </div>
+  <p>
+    etiquetado de contentido para
+    <span class="content" content-type="policia">
+      policia
+    </span>
+  </p>
+  <p>
+    probando
+    <span class="palette" color="warn">
+      palette tag nueva
+    </span>
+  </p>
+  <p>
+    probando el
+    <span
+      class="tag"
+      type="OPE"
+      color="#FF0000">
+      nuevo mark de exam_tag
+    </span>
+  </p>
+  <div
+    class="node-multi-cols"
+    ncols=2>
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+      magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+      ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+      consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+      praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend
+      option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est
+      usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt
+      saepius.
+  </div>
+</div>
+
+<div
+  style="display: none"
+  id="content2">
+  <h3>Hello ProseMirror</h3>
+
+  <p>
+    This is editable text. You can focus it and start typing.
+  </p>
+
+  <p>
+    To apply styling, you can select a piece of text and manipulate
+        its styling from the menu. The basic schema
+        supports
+    <em>emphasis</em>
+    ,
+    <strong>strong
+            text</strong>
+    ,
+    <a href="http://marijnhaverbeke.nl/blog">links</a>
+    ,
+    <code>code
+  font</code>
+  </p>
+
+  <p>
+    Block-level structure can be manipulated with key bindings (try
+        ctrl-shift-2 to create a level 2 heading, or enter in an empty
+        textblock to exit the parent block), or through the menu.
+  </p>
+
+  <p>
+    Try using the “list” item in the menu to wrap this paragraph in
+        a numbered list.
+  </p>
+
+  <p></p>
+
+  <!-- <table class="default">
+        <tr>
+            <td>Celda 1</td>
+            <td>Celda 2</td>
+            <td>Celda 3</td>
+        </tr>
+        <tr>
+            <td>Celda 4</td>
+            <td>Celda 5</td>
+            <td>Celda 6</td>
+        </tr>
+    </table> -->
+</div>
+
+<div
+  style="display: none"
+  id="table">
+  <h2>Example content</h2>
+
+  <!-- <div class="box" box-color="#c4e9e9">
+      probando cuadro de color
+    </div> -->
+
+  <p>The table:</p>
+  <table>
+    <tbody>
+      <tr>
+        <th
+          colspan=3
+          data-colwidth="100,0,0">
+          Wide header
+        </th>
+      </tr>
+      <tr>
+        <td>One</td>
+        <td>Two</td>
+        <td>Three</td>
+      </tr>
+      <tr>
+        <td>Four</td>
+        <td>Five</td>
+        <td>Six</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+<button type="button" (click)="saveNewVersion()">
+  Nueva version
+</button>
